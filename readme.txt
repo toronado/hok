@@ -1,11 +1,14 @@
 Hopefully it's visually intuitive to use however it may not be obvious where the relevant files are...
 
+--- Index.html ---
+app/index.html
+
 --- JavaScript ---
-scripts/app.js
-scripts/controllers/main.js
+app/scripts/app.js
+app/scripts/controllers/main.js
 
 --- HTML ---
 app/views/main.html
 
 --- CSS (SASS Compiled via Gruntfile.js) ---
-styles/main.scss
+app/styles/main.scss
