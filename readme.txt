@@ -3,6 +3,9 @@ Hopefully it's visually intuitive to use however it may not be obvious where the
 --- Index ---
 app/index.html
 
+--- JSON ---
+app/json/data.json
+
 --- JavaScript ---
 app/scripts/app.js
 app/scripts/controllers/main.js
