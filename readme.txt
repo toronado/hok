@@ -7,5 +7,5 @@ scripts/controllers/main.js
 --- HTML ---
 app/views/main.html
 
---- CSS (SASS Compiled via Grunt.js) ---
+--- CSS (SASS Compiled via Gruntfile.js) ---
 styles/main.scss
