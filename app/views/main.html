@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse animated slideInDown">
 	<div class="container-fluid">
     	<div class="navbar-inner">
      		<span class="navbar-brand">
@@ -8,10 +8,13 @@
 				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 				<span class="badge" data-ng-class="{active: totalItems}">
 					<button data-ng-click="showModal(true)">
-						<span class="totalPrice">{{totalPrice | currency:'£'}}</span>
-						<span class="totalItems" data-ng-show="totalItems">
-							({{totalItems}}
-							<ng-pluralize count="totalItems" when="{'0': 'items', '1': 'item', 'other': 'items'}"></ng-pluralize>)
+						Cart:
+						<span class="totalItems">
+							{{totalItems}}
+							<ng-pluralize count="totalItems" when="{'0': 'items', '1': 'item', 'other': 'items'}"></ng-pluralize>
+						</span>
+						<span class="totalPrice">
+							({{totalPrice | currency:'£'}})
 						</span>
 					</button>
 				</span>
@@ -22,10 +25,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h1>Kaizen Catalogue</h1>
+			<h1>Catalogue
+				<small>{{products.length}} products</small>
+			</h1>
 			<div class="row">
 				<div class="col-md-12">
-					<article class="well animated slideInDown" data-ng-repeat="product in products">
+					<article class="well animated slideInUp" data-ng-repeat="product in products">
 						<div class="media">
 							<div class="media-left">
 							  	<img class="media-object" data-ng-src="{{product.image_url}}" alt="{{product.title}}">
@@ -50,7 +55,7 @@
 
 <!-- Modal -->
 <div id="modal" data-ng-show="modal">
-	<div id="cover" class="animated fadeIn"></div>
+	<div id="overlay" class="animated fadeIn"></div>
 	<div id="modalContent" class="animated slideInDown">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -78,7 +83,7 @@
 				</div>
 			</div>
 			<div class="panel-footer">
-				Total ({{totalItems}}):
+				Total:
 				<span class="badge total pull-right">{{totalPrice | currency:'£'}}</span>
 			</div>
 		</div>
