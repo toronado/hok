@@ -1,6 +1,6 @@
 Hopefully it's visually intuitive to use however it may not be obvious where the relevant files are...
 
---- Index.html ---
+--- Index ---
 app/index.html
 
 --- JavaScript ---
