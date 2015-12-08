@@ -7,25 +7,26 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #F4F6F7;
+  background-color: #f2f2f2;
   font-size: 16px;
   font-size: 1rem;
   color: #0F2B43; }
 
 a {
-  color: #1FBA97; }
+  color: #239548; }
 
 button.btn {
   padding: 8px 16px;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 0;
-  border: #1FBA97 solid 2px;
-  color: #188e74;
-  background: none; }
+  border-radius: 3px;
+  border: #239548 solid 2px;
+  color: #fff !important;
+  background-color: #239548;
+  outline: none !important; }
 
 hr {
-  border-color: #e5eaec; }
+  border-color: #e5e5e5; }
 
 h1 {
   font-size: 22px;
@@ -38,23 +39,31 @@ h1 {
   border: none; }
   .navbar .navbar-text {
     margin: 0 15px;
-    line-height: 49px; }
+    line-height: 50px; }
   .navbar .navbar-text,
   .navbar .navbar-brand {
     color: #fff; }
-  .navbar a {
-    color: #999999;
-    text-decoration: none; }
-  .navbar small a {
-    font-size: 0.75rem; }
-  .navbar small a:hover {
-    color: white; }
+  .navbar span.badge {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 0; }
+    .navbar span.badge .totalItems {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      color: #104220; }
+  .navbar span.badge.active {
+    background-color: #239548; }
+  .navbar button {
+    padding: 6px 12px;
+    border: none;
+    background: none;
+    outline: none !important; }
 
 /* Overview 
 -------------------------*/
 .well {
   background-color: #fff;
-  border-color: #ebeff1;
+  border-color: #eaeaea;
   border-bottom: none;
   box-shadow: 0 6px 5px -8px #333;
   border-radius: 0;
@@ -79,6 +88,87 @@ h1 {
     margin-top: 20px;
     margin-bottom: 6.66667px;
     text-align: center; }
+
+/* Modal 
+-------------------------*/
+#modal #cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%; }
+#modal #modalContent {
+  position: fixed;
+  top: 80px;
+  z-index: 6;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 500px; }
+  #modal #modalContent .panel-default {
+    border: none;
+    border-radius: 0; }
+    #modal #modalContent .panel-default .panel-heading {
+      background-color: #239548;
+      border-radius: 0;
+      border: none;
+      color: #fff;
+      padding: 15px;
+      font-weight: 600; }
+      #modal #modalContent .panel-default .panel-heading button {
+        background: none;
+        border: none;
+        color: #fff; }
+    #modal #modalContent .panel-default .panel-body {
+      padding: 0; }
+      #modal #modalContent .panel-default .panel-body .empty {
+        margin: 0;
+        padding: 30px 15px;
+        text-align: center;
+        font-weight: 600; }
+      #modal #modalContent .panel-default .panel-body .media {
+        padding: 15px;
+        margin: 0;
+        border-bottom: #eee solid 1px; }
+        #modal #modalContent .panel-default .panel-body .media .media-heading {
+          margin: 0;
+          font-size: 15px;
+          font-size: 0.9375rem;
+          line-height: 1.2;
+          font-weight: 600; }
+        #modal #modalContent .panel-default .panel-body .media img {
+          width: 50px; }
+        #modal #modalContent .panel-default .panel-body .media span.title {
+          font-size: 18px;
+          font-size: 1.125rem;
+          color: #0F2B43;
+          display: block;
+          font-weight: 600; }
+        #modal #modalContent .panel-default .panel-body .media span.quantity {
+          color: #666;
+          font-size: 14px;
+          font-size: 0.875rem; }
+        #modal #modalContent .panel-default .panel-body .media span.price {
+          font-size: 14px;
+          font-size: 0.875rem;
+          font-weight: 600; }
+    #modal #modalContent .panel-default .panel-footer {
+      border: none;
+      background-color: #eee;
+      color: #131d25;
+      border-radius: 0;
+      padding: 15px;
+      font-weight: 600;
+      box-shadow: 0 8px 6px -6px #444; }
+      #modal #modalContent .panel-default .panel-footer span.badge {
+        background: none;
+        font-size: 18px;
+        font-size: 1.125rem;
+        color: #131d25;
+        padding: 0; }
 
 @media (max-width: 768px) {
   .container-fluid {
