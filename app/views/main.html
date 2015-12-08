@@ -1,0 +1,52 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container-fluid">
+    	<div class="navbar-inner">
+     		<a class="navbar-brand" href="#/overview/">
+        		House of Kaizen
+      		</a>
+	    	<span class="navbar-text pull-right">
+	    		<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	    		<small>
+	    			<span class="username">Cart {{total | currency:'£'}}</span>
+	    			<a href="#/">({{items.length;}})</a>
+	    		</small>
+	    	</span>
+	    </div>
+  	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1>Catalogue</h1>
+			<div class="row">
+				<div class="col-md-12">
+					<article class="well animated slideInDown" data-ng-repeat="product in products">
+						<div class="media">
+							<div class="media-left">
+							  	<img class="media-object" data-ng-src="{{product.image_url}}" alt="{{product.title}}">
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">{{product.title}}</h4>
+								<p>{{product.description}}</p>
+							</div>
+							<div class="media-right">
+								<span class="price">
+									{{product.price | currency:'£'}}
+								</span>
+								<button class="btn primary" data-ng-click="addToCart($index, product)">Add to Cart</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div data-ng-repeat="item in items track by $index">
+	{{item.title}}
+</div>
+
+
+
