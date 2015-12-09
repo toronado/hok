@@ -51,7 +51,7 @@
                 return $http({
                         method: 'GET',
                         url: 'json/data.json',
-                        cache: false
+                        params: { 'x': new Date().getTime() } // To Avoid Cacheing
                     })
                     .then(function (response) {
                         return response.data;
