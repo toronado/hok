@@ -14,7 +14,7 @@ var hokApp = angular.module('hokApp', [
 
 hokApp.config(function ($routeProvider) {
     $routeProvider
-        .when('/', {
+        .otherwise({
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
         });
