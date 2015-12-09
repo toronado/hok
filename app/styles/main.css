@@ -57,7 +57,7 @@ button {
   border-bottom: none;
   box-shadow: 0 6px 5px -8px #333;
   border-radius: 0;
-  margin-bottom: 0; }
+  margin-bottom: 10px; }
   .well h4 {
     font-size: 18px;
     font-size: 1.125rem;
